@@ -1,0 +1,246 @@
+                                                                                             CT4101 | Machine Learning Portfolio Project
+                                             CT4101 | MACHINE LEARNING
+
+
+
+    Machine Learning Portfolio Project
+1. Project Task
+Complete a focused Machine Learning investigation using an approved dataset. Your project should normally
+address one classification or regression problem using techniques taught in the module. The aim is to
+demonstrate a sound process, not to use the most complex model or obtain the highest possible score.
+You must:
+    1.   Define a clear problem and explain the dataset;
+    2.   Prepare the data and design a valid evaluation;
+    3.   Build and compare a small number of suitable models against each other;
+    4.   Interpret the results, limitations and responsible-use implications.
+
+2. What you will Submit
+    •    Code or notebook: a complete, readable workflow that loads the data, prepares it, trains the models
+         and produces the reported results. You should use an online repository to track and store all the
+         work for this project.
+    •    Detailed report: maximum 3,000 words covering the problem, data, methods, results, limitations,
+         and conclusion.
+    •    README and environment file: brief instructions for running the work, including required
+         packages.
+    •    Demonstration video: A 5 minute video (screen capture with voice over) demonstrating your
+         project and explaining your main decisions, results and one important limitation.
+    •    Assistance declaration: Identify any external code, collaboration, generative AI or coding-assistant
+         use throughout the project.
+Use an approved, appropriately licensed dataset. Do not submit confidential or uncontrolled personal data.
+The submitted workflow must run using the instructions provided.
+
+3. How the Project will be Graded
+ Criterion                   Marks   What markers will look for
+ Problem and data            3       A focused question; suitable dataset, target and features; clear source, context and
+ understanding                       limitations.
+ Data preparation and        4       Appropriate cleaning and preprocessing; sensible train/test or cross-validation design;
+ methodology                         avoidance of data leakage; reproducible code.
+ Modelling and comparison    4       A simple baseline and at least two suitable learned models; justified choices; fair
+                                     comparison and proportionate tuning.
+ Evaluation and critical     5       Suitable metrics; clear comparison of results; error or residual analysis; conclusions
+ analysis                            supported by evidence.
+ Responsible ML and          2       Intended use, important risks, interpretability and realistic limitations considered in
+ limitations                         the context of the project.
+ Communication and           2       Clear report and visuals; well-organised submission; concise demonstration showing
+ understanding                       understanding of the work.
+ Total                       20
+
+                                      University of Galway • Student Assessment Brief • 1
+                                                                                                      CT4101 | Machine Learning Portfolio Project
+
+4. Alignment with Course Content
+ Project activity                       Related module content
+ Define the task and inspect the        Introduction to ML; Python and the ML ecosystem; data understanding.
+ dataset
+ Prepare features and design the        Data preparation and feature engineering; train/test design; metrics and leakage
+ evaluation                             prevention.
+ Build and compare models               Regression, k-nearest neighbours, decision trees, ensembles and other suitable methods
+                                        taught in the module.
+ Analyse and explain results            Model evaluation, error analysis, interpretability, responsible AI and critical reflection.
+
+
+You are not required to use every algorithm taught. Select methods that suit your problem and explain your
+choices. It is also recommended that you research appropriate models outside of those taught in CT4101 in
+order to broaden your overall knowledge.
+
+5. Work Plan
+The following milestone submission deadlines will apply. Failure to submit a deliverable on time will result
+in a reduction of 4 marks from your final result. For example, if you only submit the final portfolio without
+any of the other deliverables, the most marks you can receive is 8/20 since you will have lost 3 x 4 for failing
+to submit the previous deliverables.
+ Milestone            Timing       Deliverable                                                   Purpose
+ 1. Project           End of       One-page proposal identifying the dataset,                    Confirms that the project is focused,
+ proposal             Week 3       prediction task, target variable, intended evaluation         feasible and uses an appropriate
+                                   metrics and key data risks.                                   dataset.
+ 2. Data and          End of       Working notebook or code showing the data audit,              Checks that the workflow is
+ baseline             Week 7       preprocessing pipeline, evaluation design and                 reproducible and that the evaluation
+ checkpoint                        results from a simple baseline model.                         avoids data leakage.
+ 3. Model             End of       Draft results table comparing the baseline with at            Provides an opportunity to improve
+ comparison           Week 10      least two suitable learned models, plus one example           the analysis before final submission.
+ checkpoint                        of error or residual analysis.
+ 4. Final portfolio   End of       Complete code or notebook, report, README and                 Demonstrates the complete machine
+                      Week 12      environment file, demonstration video, and                    learning process and is graded using
+                                   assistance declaration.                                       the 20-mark rubric.
+
+
+Milestones 1–3 are short progress deliverables used for formative feedback and project approval, but they are
+very important to ensure you are making consistent progress. They are marked on a complete/incomplete
+basis and failure to complete them will result in mark deductions as described above. The final portfolio is
+graded using the criteria in Section 3.
+
+
+
+
+                                           University of Galway • Student Assessment Brief • 2
+                                                                                           CT4101 | Machine Learning Portfolio Project
+
+6. Exact Milestone Submissions
+Submit each milestone through the designated Canvas assignment as a single ZIP file unless Canvas states
+otherwise. Use the filename format StudentID_MilestoneNumber.zip.
+
+Milestone 1: Project Proposal
+Submit one PDF of no more than one page containing:
+   •   the project title and a clear classification or regression question;
+   •   the dataset name, source, licence and citation;
+   •   the target variable and main input features;
+   •   the approximate number of records and important data-quality issues;
+   •   the proposed baseline, candidate models and evaluation metrics;
+   •   one short paragraph on privacy, fairness, misuse or other responsible-ML risks;
+   •   a link to the online project repository.
+
+Milestone 2: Data and Baseline Checkpoint
+Submit:
+   •   a working notebook or source-code folder that loads the data and runs the work completed so far;
+   •   a README with setup and run instructions;
+   •   an environment or requirements file listing required packages;
+   •   a brief data audit covering dataset shape, variable types, missing values, duplicates, target
+       distribution and any obvious outliers;
+   •   the preprocessing pipeline and explanation of the train/test split or cross-validation design;
+   •   results for a simple baseline model using the proposed metrics;
+   •   the repository link and a short assistance declaration.
+
+Milestone 3: Model Comparison Checkpoint
+Submit:
+   •   updated runnable code or notebook;
+   •   a results table comparing the baseline with at least two suitable learned models under the same
+       evaluation protocol;
+   •   the main model settings and a brief explanation of any tuning performed;
+   •   at least one relevant visualisation, such as a confusion matrix, ROC or precision–recall curve, residual
+       plot or feature-importance plot;
+   •   a short error or residual analysis identifying where a model performs poorly;
+   •   a draft conclusion stating the current best model, evidence, limitations and next steps;
+   •   the updated repository link and assistance declaration.
+
+
+
+
+                                     University of Galway • Student Assessment Brief • 3
+                                                                                           CT4101 | Machine Learning Portfolio Project
+
+Milestone 4: Final Portfolio
+Submit:
+   •   the final code or notebook, with outputs generated from the submitted workflow;
+   •   the final report of no more than 3,000 words;
+   •   a README and environment or requirements file sufficient to reproduce the work;
+   •   any small permitted data files, or clear instructions for obtaining the dataset where redistribution is
+       not allowed;
+   •   the final results, visualisations, error analysis, responsible-ML discussion and limitations;
+   •   a five-minute demonstration video submitted in the format specified on Canvas;
+   •   the final repository link;
+   •   a complete assistance declaration covering external code, collaboration, generative AI and coding-
+       assistant use.
+Before submitting each milestone, confirm that files open correctly, links are accessible to the teaching team
+and the supplied instructions run the work without undocumented steps.
+
+7. Important Information
+   •   The work must be your own and you must be able to explain all submitted code, results and decisions.
+       Suspicious cases may lead to student interviews and could result with being referred to the School of
+       Computer Science Academic Integrity Advisor for disciplinary action.
+   •   Do not tune models using the final test set.
+   •   Cite the dataset and any external code or sources.
+   •   Declare any use of generative AI and coding assistants, and verify all assisted work.
+
+8. Resources and Setup Guides
+The following resources can help you find a suitable dataset and create a reproducible project. Always check
+the dataset licence, documentation, provenance and ethical implications before requesting approval.
+
+Finding an Appropriate Dataset
+   •   UCI Machine Learning Repository: well-documented datasets for classification and regression,
+       often with clear feature and target descriptions.
+   •   OpenML: searchable datasets with machine-readable metadata, task types and links to previous
+       experiments.
+   •   Kaggle Datasets: a large collection of community and organisation-published datasets. Check the
+       original source, licence and quality rather than relying only on the Kaggle description.
+   •   data.gov.ie: the Irish Government open-data portal, useful for public-sector, transport, environment,
+       health and regional datasets.
+   •   Central Statistics Office Ireland: official Irish statistical datasets. Confirm that the selected table
+       supports a meaningful prediction task rather than only descriptive analysis.
+   •   EU Data Portal and other official open-data portals: useful for public datasets with documented
+       provenance and reuse conditions.
+A suitable dataset should have a clear prediction target, enough usable records and features for model
+comparison, manageable size, documented meaning, and a licence that permits academic use. Avoid datasets
+containing uncontrolled personal, confidential or highly sensitive information.
+
+                                     University of Galway • Student Assessment Brief • 4
+                                                                                         CT4101 | Machine Learning Portfolio Project
+
+Repository Setup
+  •   Use the official GitHub Docs: Creating and managing repositories guide to create a repository.
+  •   Add a README explaining the project question, dataset source, folder structure, setup steps and exact
+      commands required to run the work.
+  •   Use a Python .gitignore, following the official GitHub Docs: Ignoring files guide. Do not commit
+      virtual environments, passwords, API keys, temporary files or large generated outputs.
+  •   Commit regularly using short, meaningful messages. The history should show steady development
+      rather than one final upload.
+  •   Do not place data in the repository unless its licence permits redistribution. Otherwise, provide
+      download and preparation instructions.
+
+Python Environment
+  •   Create a separate environment for the project using either Python venv or conda. The official scikit-
+      learn installation guide provides current commands for Windows, macOS and Linux.
+  •   Install only the packages required by the project and record their versions in requirements.txt or
+      environment.yml.
+  •   Test the recorded environment by recreating it and running the full workflow from a clean session
+      before each milestone.
+  •   Record the Python version and any system-specific requirements in the README.
+
+Notebooks and Code
+  •   Jupyter Notebook or JupyterLab may be used locally; a hosted notebook such as Google Colab may also
+      be used if the work can be reproduced from the submitted files and environment information.
+  •   Organise notebooks in a clear sequence: project setup, data loading, audit, preprocessing, modelling,
+      evaluation and conclusions.
+  •   Use descriptive headings and short explanations, but keep code cells focused and remove abandoned
+      experiments.
+  •   Restart the kernel and run all cells from top to bottom before submission. The notebook must not
+      depend on hidden variables or an undocumented execution order.
+  •   Where the workflow becomes lengthy, move reusable functions into Python files and import them into
+      the notebook.
+
+
+
+
+                                   University of Galway • Student Assessment Brief • 5
+                                                                                         CT4101 | Machine Learning Portfolio Project
+
+Suggested Project Structure
+       Item                       Purpose
+       README.md                  Project overview, dataset source, setup and run instructions.
+       requirements.txt or        Package names and versions required to reproduce the work.
+       environment.yml
+       notebooks/                 Numbered notebooks for exploration, modelling and final
+                                  analysis.
+       src/                       Reusable Python functions or scripts, where needed.
+       data/README.md             Dataset source, licence, download and preparation instructions;
+                                  avoid committing restricted or large data.
+       reports/                   Final report and any figures required for submission.
+       .gitignore                 Files and folders that must not be tracked.
+
+
+Use the latest versions of official documentation. Search for the exact resource titles above rather than
+following unverified installation instructions from third-party sites.
+
+
+
+
+                                   University of Galway • Student Assessment Brief • 6
+

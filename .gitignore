@@ -1,2 +1,3 @@
 .env
 private/
+.DS_Store
