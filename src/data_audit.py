@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 
 df = pd.read_csv(
     Path(__file__).resolve().parents[1] / "private" / "heloc_dataset_v1.csv"

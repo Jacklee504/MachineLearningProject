@@ -22,9 +22,14 @@ The code removes 588 rows with all predictors equal to -9 and one other duplicat
 values, then uses a stratified 80/20 split and training-only median imputation. The Dummy Classifier predicts Bad for 
 every test case.
 
-Accuracy: **0.520** · Bad precision: **0.520** · Bad recall: **1.000** · Bad F1: **0.684** · ROC-AUC: **0.500**.
+The split uses random seed 42 and Bad is the positive class (1)
 
-Confusion matrix (actual Good/Bad by predicted Good/Bad):[[0, 947], [0, 1027]]
+Accuracy: 0.520  
+Bad precision: 0.520  
+Bad recall: 1.000  
+Bad F1: 0.684  
+ROC-AUC: 0.500  
+
+Confusion matrix (actual Good/Bad by predicted Good/Bad):<br>[0, 947],<br> [0, 1027]
 
 Repository: [MachineLearningProject](https://github.com/Jacklee504/MachineLearningProject).
-
