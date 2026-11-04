@@ -16,20 +16,12 @@ python src/data_audit.py
 python src/baseline.py
 ```
 
-## Baseline results
-
-The code removes 588 rows with all predictors equal to -9 and one other duplicate. It treats -7, -8 and -9 as missing 
-values, then uses a stratified 80/20 split and training-only median imputation. The Dummy Classifier predicts Bad for 
-every test case.
-
-The split uses random seed 42 and Bad is the positive class (1)
-
-Accuracy: 0.520  
-Bad precision: 0.520  
-Bad recall: 1.000  
-Bad F1: 0.684  
-ROC-AUC: 0.500  
-
-Confusion matrix (actual Good/Bad by predicted Good/Bad):<br>[0, 947],<br> [0, 1027]
-
 Repository: [MachineLearningProject](https://github.com/Jacklee504/MachineLearningProject).
+
+[Baseline Results](docs/baseline_results.md)
+
+## Assistance Declaration
+
+I made use of ChatGPT/Codex when trying to find suitable datasets, as well as for creating a plan for each milestone so that I could work efficiently. I implemented the plans independently, using the plans as guidance. 
+
+I used it to assist in the data audit as I was unsure of exactly what should be measured. I got it then to verify my data_audit implementation to ensure it was correct.
