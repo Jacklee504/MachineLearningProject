@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import pandas as pd
 from sklearn.dummy import DummyClassifier
 from sklearn.impute import SimpleImputer
@@ -54,3 +53,16 @@ print(classification_report(
 print(f"ROC-AUC:   {roc_auc_score(y_test, bad_probabilities):.3f}")
 print("Confusion matrix (rows: actual Good/Bad; columns: predicted Good/Bad):")
 print(confusion_matrix(y_test, predictions, labels=[0, 1]))
+
+print("\nBaseline metrics:")
+cr = classification_report(y_test, predictions, target_names=["Good", "Bad"], output_dict=True, zero_division=0)
+metrics = {
+    "Accuracy": cr["accuracy"],
+    "Bad precision": cr["Bad"]["precision"],
+    "Bad recall": cr["Bad"]["recall"],
+    "Bad F1": cr["Bad"]["f1-score"],
+    "Good recall": cr["Good"]["recall"],
+    "ROC-AUC": roc_auc_score(y_test, bad_probabilities),
+}
+for label, value in metrics.items():
+    print(f"{label:<14}: {value:.3f}")

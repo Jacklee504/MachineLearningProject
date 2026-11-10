@@ -17,9 +17,9 @@ ROC-AUC:   0.500
 Confusion matrix (rows: actual Good/Bad; columns: predicted Good/Bad):
 [[   0  947]
  [   0 1027]]
+``` 
 
 
 The above shows the model predicts Bad for every case, and misses all Good cases.
 
 The ROC-AUC is 0.500.
-``` 
