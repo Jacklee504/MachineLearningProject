@@ -8,6 +8,17 @@ Missing values -7, -8, and -9 are imputed using feature medians learned from the
 Each model uses default settings, with the exceptions of the dummy model using strategy="prior" and logistic regression using max_iter=1000. No tuning was performed.
 
 
+## Training-set cross-validation
+
+Logistic regression and random forest were compared using five stratified folds of the training set, shuffled with random state 42. Each pipeline fits its imputation and any scaling within each fold. Values are the mean ± standard deviation across folds; Bad is the positive class.
+
+| Model | Bad F1 | Bad recall | ROC-AUC |
+|---|---:|---:|---:|
+| LogisticRegression | 0.746 ± 0.009 | 0.753 ± 0.016 | 0.801 ± 0.011 |
+| RandomForest | 0.749 ± 0.007 | 0.767 ± 0.011 | 0.792 ± 0.010 |
+
+## Held-out test results
+
 | Model | Accuracy | Bad precision | Bad recall | Bad F1 | Good recall | ROC-AUC |
 |---|---:|---:|---:|---:|---:|---:|
 | Dummy Baseline | 0.520 | 0.520 | 1.000 | 0.684 | 0.000 | 0.500 |
@@ -28,9 +39,6 @@ Both learned models are capable of identifying both classes.
 
 Comparing Logistic Regression (LR) with Random Forest (RF), RF has 18 fewer Bad cases as Good (241 versus 259), but it labels 4 more Good cases as Bad (288 versus 284).
 
-
 ## Conclusion
 
-Random forest is preferred to Logistic Regression as it has higher Bad F1 (0.748, greater by 0.009) and Bad recall (0.765, greater by 0.017), and has a ROC-AUC greater by 0.0003. 
-
-Because of the similarity between RF and LR, the two models should be compared further across training-data folds.
+Random forest is the current preference for identifying Bad cases. Its mean cross-validation Bad recall is 0.767 versus 0.753 for logistic regression, while mean Bad F1 is close (0.749 versus 0.746). Logistic regression has the higher cross-validation ROC-AUC (0.801 versus 0.792). The held-out results also favour random forest slightly on Bad recall and F1, but one test split and these small differences do not establish that it is consistently better.

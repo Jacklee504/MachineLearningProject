@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import StratifiedKFold, cross_validate, train_test_split
 from sklearn.dummy import DummyClassifier
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score
@@ -61,7 +61,7 @@ def make_models():
                 ("imputer", SimpleImputer(strategy="median", add_indicator=True)),
                 ("classifier", RandomForestClassifier(random_state=42)),
             ]
-        )       
+        )
     }
 
 def evaluate(name, model, X_train, X_test, y_train, y_test):
@@ -91,11 +91,29 @@ def save_confusion_matrix(matrix):
     display.figure_.savefig("docs/random_forest_confusion_matrix.png")
 
 
+models = make_models()
+folds = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+print("Training-set cross-validation (5 stratified folds):")
+print("| Model | Bad F1 (mean ± SD) | Bad recall (mean ± SD) | ROC-AUC (mean ± SD) |")
+print("|---|---:|---:|---:|")
+for name in ("LogisticRegression", "RandomForest"):
+    scores = cross_validate(
+        models[name], X_train, y_train, cv=folds,
+        scoring={"bad_f1": "f1", "bad_recall": "recall", "roc_auc": "roc_auc"},
+    )
+    print(
+        f"| {name} | {scores['test_bad_f1'].mean():.3f} ± {scores['test_bad_f1'].std():.3f} | "
+        f"{scores['test_bad_recall'].mean():.3f} ± {scores['test_bad_recall'].std():.3f} | "
+        f"{scores['test_roc_auc'].mean():.3f} ± {scores['test_roc_auc'].std():.3f} |"
+    )
+
+print("\nHeld-out test results:")
 print("| Model | Accuracy | Bad precision | Bad recall | Bad F1 | Good recall | ROC-AUC |")
 print("|---|---:|---:|---:|---:|---:|---:|")
 
 matrices = []
-for name, model in make_models().items():
+for name, model in models.items():
     metrics, matrix = evaluate(name, model, X_train, X_test, y_train, y_test)
     print(
         f"| {name} | {metrics['Accuracy']:.3f} | "

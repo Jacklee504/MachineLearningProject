@@ -5,8 +5,8 @@ and [data audit](docs/data_audit.md).
 
 ## Run
 
-Use Python 3.12 in a virtual environment. Download the [HELOC dataset](https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc) 
-and place it at private/heloc_dataset_v1.csv before running the script.
+Use Python 3.12 in a virtual environment. Download the [HELOC dataset](https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc)
+and place it at `private/heloc_dataset_v1.csv` before running the scripts. The original source is the FICO Explainable Machine Learning Challenge. The project proposal records the Kaggle licence as unknown, so the CSV is kept out of this repository.
 
 From the project directory:
 
