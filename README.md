@@ -1,27 +1,45 @@
 # HELOC Credit Performance Project
 
-This project predicts whether a HELOC applicant has Good or Bad credit performance. See the [proposal](docs/ProjectProposal.md) 
-and [data audit](docs/data_audit.md).
+[Repository Link](https://github.com/Jacklee504/MachineLearningProject)
 
-## Run
+```text
+Can credit history predict whether a HELOC record is labelled Good or Bad? 
+```
 
-Use Python 3.12 in a virtual environment. Download the [HELOC dataset](https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc)
-and place it at `private/heloc_dataset_v1.csv` before running the scripts. The original source is the FICO Explainable Machine Learning Challenge. The project proposal records the Kaggle licence as unknown, so the CSV is kept out of this repository.
+Both learned models outperformed the dummy baseline on ROC-AUC. Random forest had slightly higher mean Bad recall and F1 in cross-validation, while logistic regression had higher mean ROC-AUC.
 
-From the project directory:
+## Project structure
+
+- src/contains the audit, baseline, and model comparison scripts. The main script issrc/model_comparison.py
+- docs/contains the proposal, audit, results, and confusion matrix.
+- private/holds the dataset locally and is excluded from Git.
+
+## Setup and run
+
+Tested on macOS with Python 3.12. Package versions are pinned in [requirements.txt](src/requirements.txt).
+
+From the project directory, runmkdir -p private Download the [FICO HELOC dataset from Kaggle](https://www.kaggle.com/datasets/averkiyoliabev/home-equity-line-of-creditheloc) and save it asprivate/heloc_dataset_v1.csv
+
+Run these commands from the project directory. The audit summarises the dataset, the baseline sets a reference score, and the model comparison prints the final metrics and saves the random forest confusion matrix.
 
 ```bash
+python3.12 -m venv .venv
+source .venv/bin/activate
+
 python -m pip install -r src/requirements.txt
+
 python src/data_audit.py
 python src/baseline.py
 python src/model_comparison.py
 ```
 
-[Repository Link](https://github.com/Jacklee504/MachineLearningProject)
+## Documentation
 
-[Baseline Results](docs/baseline_results.md).
-
-[Model Comparison Results](docs/model_comparison.md).
+- [Baseline Results](docs/baseline_results.md).
+- [Model Comparison Results](docs/model_comparison.md).
+- [Data Statement](docs/data_statement.md)
+- [Model Card](docs/model_card.md)
+- [Reflective Changelog](docs/reflective_changelog.md)
 
 [Random forest confusion matrix](docs/random_forest_confusion_matrix.png)
 
